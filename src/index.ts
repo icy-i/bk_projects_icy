@@ -10,7 +10,7 @@ const users = [
     { id: 3, name: "3", email: "charlie@example.com" },
 ];
 app.get("/",(_req,res)=>{
-    res.send(hey);
+    res.json(hey);
 });
 
 app.get("/users",(_req,res)=>{
@@ -24,7 +24,7 @@ app.get("/users/:id",(req,res) => {
     if(user){
         res.json(user);
     } else {
-        res.status(404).send("User not found");
+        res.status(404).json("User not found");
     }
 })
 
